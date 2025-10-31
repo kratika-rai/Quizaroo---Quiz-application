@@ -1,0 +1,279 @@
+/* ===========================================================
+   IMPORTING FONTS
+=========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+IN:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* ===========================================================
+   GLOBAL STYLES
+=========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    min-height: 100vh;
+    background-color: #68d3bd;
+}
+
+/* Hide all containers by default */
+:where(.config-container, .quiz-container, .result-container) {
+    display: none;
+    background-color: #f7f2f4;
+    box-shadow: 0 6px 12px rgba(84, 28, 72, 0.11);
+    border-radius: 12px;
+}
+
+/* ===========================================================
+   CONFIG CONTAINER (CATEGORY + AGE SELECTION)
+=========================================================== */
+.config-container {
+    display: block; /* default visible */
+    text-align: center;
+    padding: 20px;
+}
+
+.config-container .config-title {
+    font-size: 3rem;
+    margin: 15px;
+}
+
+.config-container .category-option,
+.config-container .category-options {
+    margin: 10px;
+    font-size: 1.4rem;
+}
+
+/* ===========================================================
+   CATEGORY & AGE BUTTONS
+=========================================================== */
+.category-buttons,
+.age-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.category-buttons .category-butt,
+.age-buttons .category-butt {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: #68d3bd;
+    color: #fff;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+/* Hover effect */
+.category-butt:hover {
+    background-color: #4ec0a9;
+    transform: translateY(-1px);
+}
+
+/* Active / selected state */
+.category-butt.active {
+    background-color: #2cae9d;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================================================
+   START QUIZ BUTTON
+=========================================================== */
+button.start-quiz {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(103, 110, 213);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease, transform 0.2s ease;
+}
+
+button.start-quiz:hover {
+    background-color: rgb(82, 88, 182);
+    transform: translateY(-2px);
+}
+
+/* ===========================================================
+   QUIZ CONTAINER
+=========================================================== */
+.quiz-container {
+    display: none;
+    width: 640px;
+}
+
+.quiz-container .quiz-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 25px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.09);
+}
+
+.quiz-header .quiz-title {
+    font-size: 1.43rem;
+    font-weight: 700;
+}
+
+.quiz-header .quiz-timer {
+    display: flex;
+    width: 70px;
+    font-weight: 600;
+    align-items: center;
+    gap: 5px;
+    color: #f7f2f4;
+    background: #32313C;
+    padding: 7px 9px;
+    border-radius: 6px;
+}
+
+.quiz-header .quiz-timer span {
+    font-size: 1.4rem;
+}
+
+/* ===========================================================
+   QUIZ CONTENT
+=========================================================== */
+.quiz-content {
+    padding: 20px 25px 25px;
+}
+
+.quiz-content .quiz-que {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.quiz-content .answer-options {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.quiz-content .answer-option {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 15px;
+    background: #dbeeea;
+    border-radius: 6px;
+    border: 1px solid #68d3bd;
+    transition: 0.3s ease;
+}
+
+.quiz-content .answer-option:hover {
+    background-color: #bee8e1;
+}
+
+.quiz-content .answer-option.correct {
+    background-color: #A8E6A2;
+    color: #065F06;
+}
+
+.quiz-content .answer-option.incorrect {
+    background-color: #F8AFAF;
+    color: #7F1A1A;
+}
+
+.quiz-content .answer-option span {
+    display: block;
+    flex-shrink: 0;
+    margin: -4px -3px -4px 12px;
+}
+
+/* ===========================================================
+   QUIZ FOOTER
+=========================================================== */
+.quiz-container .quiz-footer {
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #68d3bd;
+}
+
+.quiz-footer .next-que-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    padding: 9px 17px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    background: #6fe0c9;
+    color: #fff;
+    cursor: pointer;
+    gap: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    visibility: hidden;
+}
+
+.quiz-footer .next-que-btn:hover {
+    background-color: #4ec0a9;
+    transform: translateY(-1px);
+}
+
+.quiz-footer .question-status {
+    font-weight: 500;
+}
+
+/* ===========================================================
+   RESULT CONTAINER
+=========================================================== */
+.result-container {
+    text-align: center;
+    padding: 40px;
+    width: 410px;
+}
+
+.result-container img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.result-container .result-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.result-container .result-msg {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.result-container .try-again-btn {
+    margin-top: 10px;
+    font-size: 1.15rem;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #51ddc1;
+    cursor: pointer;
+    transition: 0.3s ease, transform 0.2s ease;
+}
+
+.result-container .try-again-btn:hover {
+    background-color: #3fc4a6;
+    transform: translateY(-1px);
+}

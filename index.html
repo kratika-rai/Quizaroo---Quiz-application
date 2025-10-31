@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizarooo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <!-- CONFIGURATION CONTAINER -->
+        <div class="config-container">
+            <h2 class="config-title">QUIZAROO</h2>
+
+            <!-- Category Selection -->
+            <div class="category-buttons">
+                <button class="category-butt">History</button>
+                <button class="category-butt">Space and Science</button>
+                <button class="category-butt">Biology</button>
+                <button class="category-butt">Programming</button>
+                <button class="category-butt">Geography</button>
+                <button class="category-butt">Mathematics</button>
+            </div>
+
+            <!-- Number of Questions Selection -->
+            <div class="config-age">
+                <h4 class="category-options question-option">Select no. of questions</h4>
+                <div class="age-buttons">
+                    <button class="category-butt question-btn">5</button>
+                    <button class="category-butt question-btn">10</button>
+                    <button class="category-butt question-btn">20</button>
+                </div>
+            </div>
+
+            <!-- Start Quiz Button -->
+            <button class="start-quiz">START QUIZ</button>
+        </div>
+
+        <!-- QUIZ CONTAINER -->
+        <div class="quiz-container">
+            <header class="quiz-header">
+                <h2 class="quiz-title">Quiz Application</h2>
+                <div class="quiz-timer">
+                    <span class="material-symbols-rounded">timer</span>
+                    <p class="time-duration">15s</p>
+                </div>
+            </header>
+
+            <div class="quiz-content">
+                <h1 class="quiz-que"></h1>
+                <ul class="answer-options"></ul>
+            </div>
+
+            <div class="quiz-footer">
+                <p class="question-status"><b>2</b> of <b>10</b> Questions</p>
+                <button class="next-que-btn">
+                    Next <span class="material-symbols-rounded">arrow_right_alt</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- RESULT CONTAINER -->
+        <div class="result-container">
+            <img src="over3.png" alt="result-img">
+            <h2 class="result-title">Quiz Completed!!</h2>
+            <p class="result-msg">
+                You answered <b>3</b> out of <b>10</b> questions correctly. Great effort!
+            </p>
+            <button class="try-again-btn">Try Again</button>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="javascript/questions.js"></script>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizarooo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div class="config-container">
+            <h2 class="config-title">QUIZAROO</h2>
+           
+            <div class="category-buttons">
+    <button class="category-butt">History</button>
+    <button class="category-butt">Space and Science</button>
+    <button class="category-butt">Biology</button>
+    <button class="category-butt">Programming</button>
+    <button class="category-butt">Geography</button>
+    <button class="category-butt">Mathematics</button>
+</div>
+
+            <div class="config-age">
+                <h4 class="category-options question-option">Select  no. of questions</h4>
+               
+
+                  <div class="age-buttons">
+    <button class="category-butt question-btn">5</button>
+    <button class="category-butt question-btn">10</button>
+    <button class="category-butt question-btn">20</button>
+</div>
+
+
+            
+        </div>
+        <button class="start-quiz">START QUIZ</button>
+        </div>
+
+        <div class="quiz-container">
+            <header class="quiz-header">
+                <h2 class="quiz-title">Quiz Application</h2>
+                <div class="quiz-timer">
+                    <span class="material-symbols-rounded">
+timer
+</span>
+                    <p class="time-duration">15s</p>
+                </div>
+            </header>
+            
+            <div class="quiz-content">
+                <h1 class="quiz-que"></h1>
+                <ul class="answer-options">
+                </ul>
+            
+            
+            
+            
+            </div>
+
+            <div class="quiz-footer">
+                <p class="question-status"><b>2</b> of <b>10</b> Questions</p>
+                <button class="next-que-btn">Next
+                    <span class="material-symbols-rounded">arrow_right_alt</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <img src="over3.png" alt="result-img">
+            <h2 class="result-title">Quiz Completed!!</h2>
+            <p class="result-msg">You answered <b>3</b> out of <b>10</b> questions correctly. Great effort !
+            </p>
+            
+
+            <button class="try-again-btn">Try Again</button>
+
+        </div>
+
+    </div>
+
+    <script src="javascript/questions.js"></script>
+
+    <script src="javascript/script.js"></script>
+   
+</body>
+</html> -->
